@@ -14,32 +14,32 @@
 storage: /verdaccio/storage
 
 auth:
-  ldap:
-    type: ldap
-    client_options:
-      url: "ldaps://ldap.example.com"
+#  ldap:
+#    type: ldap
+#    client_options:
+#      url: "ldaps://ldap.example.com"
       # Only required if you need auth to bind
-      adminDn: "cn=admin,dc=example,dc=com"
-      adminPassword: "admin"
+#      adminDn: "cn=admin,dc=example,dc=com"
+#      adminPassword: "admin"
       # Search base for users
-      searchBase: "ou=People,dc=example,dc=com"
-      searchFilter: "(uid={{username}})"
+#      searchBase: "ou=People,dc=example,dc=com"
+#      searchFilter: "(uid={{username}})"
       # If you are using groups, this is also needed
-      groupDnProperty: 'cn',
-      groupSearchBase: 'ou=groups,dc=myorg,dc=com',
+#      groupDnProperty: 'cn',
+#      groupSearchBase: 'ou=groups,dc=myorg,dc=com',
       # If you have memberOf support on your ldap
-      searchAttributes: ['*', 'memberOf']
-      # Else, if you don't (use one or the other):
-      # groupSearchFilter: '(memberUid={{dn}})'
+#      searchAttributes: ['*', 'memberOf']
+#      # Else, if you don't (use one or the other):
+#      # groupSearchFilter: '(memberUid={{dn}})'
       # 
       # Optional, default false.
       # If true, then up to 100 credentials at a time will be cached for 5 minutes.
-      cache: false
+#      cache: false
       # Optional
-      reconnect: true
+#      reconnect: true
 
-#    htpasswd:
-#      file: ./htpasswd
+    htpasswd:
+      file: ./htpasswd
 
 # a list of other known repositories we can talk to
 uplinks:
